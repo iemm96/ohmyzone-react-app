@@ -1,4 +1,4 @@
-import {CardType} from "../types/CardType";
+import {CategoryType} from "../types/CategoryType";
 
 export interface MainData {
     banner: BannerType;
@@ -13,10 +13,5 @@ type BannerType = {
     facebook?:string;
     instagram?:string;
     mail?:string;
-}
-
-type CategoryType = {
-    title:string;
-    cards: CardType[]
 }
 

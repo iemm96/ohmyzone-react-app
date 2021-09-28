@@ -2,9 +2,10 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import { CardComponent } from './CardComponent';
+import {CardType} from "../../types/CardType";
 
 interface SwiperComponentProps {
-    cards:any;
+    cards:CardType[];
 };
 
 export const SwiperComponent = ({cards}:SwiperComponentProps) => {
@@ -12,25 +13,21 @@ export const SwiperComponent = ({cards}:SwiperComponentProps) => {
         <Swiper
             spaceBetween={0}
             slidesPerView={'auto'}
-            centeredSlides={true}
             freeMode={true}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            {cards.map((card?:any) => {
-                return(
-                    <SwiperSlide>
-                        <CardComponent
-                            imageSrc={card.imageSrc}
-                            title={card.title}
-                            description={card.description}
-                            buttonText={card.buttonText}
-                            url={card.url}
-                        />
-                    </SwiperSlide>  
-                )
-            })}
-            
+            {cards.map((card:CardType) => (
+                <SwiperSlide>
+                    <CardComponent
+                        imageSrc={card.imageSrc}
+                        title={card.title}
+                        description={card.description}
+                        buttonText={card.buttonText}
+                        url={card.url}
+                    />
+                </SwiperSlide>
+            ))}
         </Swiper>
     )
 }

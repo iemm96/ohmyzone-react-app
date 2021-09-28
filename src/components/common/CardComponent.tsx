@@ -17,15 +17,6 @@ const useStyles = makeStyles((theme?:any) => ({
         height: 158,
         backgroundColor: theme.palette.primary.light,
     },
-    imgBackground: {
-        position: 'fixed',
-        height: '600px',
-        zIndex: -1,
-        top: 0
-    },
-    iconButton: {
-        color: 'white'
-    },
     cardActionArea: {
         height: '100%' 
     },
