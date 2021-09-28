@@ -1,4 +1,4 @@
-import { withTheme } from './Theme';
+import { withTheme } from '../common/Theme';
 import BG from '../../assets/img/bg.svg';
 import Logo from '../../assets/img/logo.png';
 
@@ -10,23 +10,27 @@ import Service3 from '../../assets/img/service3.png';
 import Behance from '../../assets/img/behance.png';
 import Linkedin from '../../assets/img/linkedin.png';
 
-import { Banner } from "./Banner";
-import { MainContent } from "./MainContent";
+import { Banner } from "../common/Banner";
+import { MainContent } from "../common/MainContent";
+import {MainData} from "../../interfaces/mainData";
 
-const mainData = {
+const mainData:MainData = {
     banner: {
         name:"NucleoDev",
         description:"Somos desarrolladores de otro planeta, ¡haz contácto con nosotros!",
         facebook:"https://facebook.com/nucleodevoficial",
         instagram:"https://instagram.com/nucleodevoficial",
         mail:"mailto:contacto@nucleodev.com",
+        logoSrc:Logo,
+        backgroundSrc:BG
     },
     categories: [{
         title:"Recursos UI",
         cards:[{
-            title:"UI kit dark mode",
-            description:"Descarga más de 100 componentes para usar en tus interfaces oscuras, ¡Completamente gratis!",
+            title:"Wallpapers y más",
+            description:"Descarga nuestros Wallpapers para que personalices tu dispositivo",
             buttonText:"Descargar gratis",
+            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
             imageSrc:ImageLink
         }]
     },{
@@ -35,16 +39,19 @@ const mainData = {
             title:"Diseño UI · UX",
             description:"Diseñamos interfaces intuitivas e impactantes para tu producto digital.",
             buttonText:"Más información",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+UX+Design&app_absent=0",
             imageSrc:Service1
         },{
             title:"Desarrollo de software",
             description:"Creamos Páginas Web, eCommerce, Sistemas, Aplicaciones móviles y WebApps.",
             buttonText:"Más información",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Desarrollo+de+Software&app_absent=0",
             imageSrc:Service2
         },{
             title:"Mentoría UX",
             description:"Te ayudamos en cualquier fase de tu proyecto, capacitamos a tu equipo en Experiencia de usuario y diseño UI.",
             buttonText:"Más información",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Mentoría+UX&app_absent=0",
             imageSrc:Service3
         }]
     },{
@@ -53,11 +60,13 @@ const mainData = {
             title:"Behance",
             description:"Mira nuestros diseños y desarrollos personales y para nuestros clientes.",
             buttonText:"Ver Behance",
+            url: "https://www.behance.net/nucleodev",
             imageSrc:Behance
         },{
             title:"LinkedIn",
             description:"Mira nuestros diseños y desarrollos personales y para nuestros clientes.",
             buttonText:"Ver LinkedIn",
+            url: "https://linkedin.com/company/nucleodev/",
             imageSrc:Linkedin
         }]
     }]
@@ -68,8 +77,8 @@ const Layout = () => {
     return (
         <>
             <Banner
-                backgroundSrc={BG}
-                logoSrc={Logo}
+                backgroundSrc={mainData.banner.backgroundSrc}
+                logoSrc={mainData.banner.logoSrc}
                 name={mainData.banner.name}
                 description={mainData.banner.description}
                 facebook={mainData.banner.facebook}

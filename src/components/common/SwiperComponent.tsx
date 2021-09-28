@@ -25,6 +25,7 @@ export const SwiperComponent = ({cards}:SwiperComponentProps) => {
                             title={card.title}
                             description={card.description}
                             buttonText={card.buttonText}
+                            url={card.url}
                         />
                     </SwiperSlide>  
                 )

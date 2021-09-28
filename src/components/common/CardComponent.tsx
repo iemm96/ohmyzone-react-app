@@ -1,12 +1,7 @@
 import {Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, Box, Button } from "@material-ui/core";
 import { withTheme } from './Theme';
-
-interface CardProps {
-    title:string;
-    description:string;
-    buttonText:string;
-    imageSrc:any;
-}
+import {handleClick} from "../../actions/handleClick";
+import {CardType} from "../../types/CardType";
 
 const useStyles = makeStyles((theme?:any) => ({
     root: {
@@ -48,12 +43,12 @@ const useStyles = makeStyles((theme?:any) => ({
 }));
 
 
-export const CardComponent = ({title,description,buttonText,imageSrc}:CardProps) => {
+export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardType) => {
     const classes = useStyles();
 
     return (
         <Card elevation={0} className={classes.root}>
-            <CardActionArea className={classes.cardActionArea}>
+            <CardActionArea onClick={() => handleClick(url) } className={classes.cardActionArea}>
                 <CardMedia component="img" image={imageSrc} className={classes.media}/>
                 <CardContent className={classes.content}>
                     <Typography variant="h6">
