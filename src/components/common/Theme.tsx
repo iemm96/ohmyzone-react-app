@@ -1,4 +1,4 @@
-import { ThemeProvider, createMuiTheme, Typography } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
 const darkTheme = createMuiTheme({
     typography: {

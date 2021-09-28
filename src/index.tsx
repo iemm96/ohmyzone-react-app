@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import Layout from './components/common/Layout';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Layout />
-  </React.StrictMode>,
+    <BrowserRouter>
+        <React.StrictMode>
+            <Layout />
+        </React.StrictMode>,
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
