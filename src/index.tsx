@@ -8,7 +8,7 @@ ReactDOM.render(
     <BrowserRouter>
         <React.StrictMode>
             <Routes/>
-        </React.StrictMode>,
+        </React.StrictMode>
     </BrowserRouter>,
   document.getElementById('root')
 );

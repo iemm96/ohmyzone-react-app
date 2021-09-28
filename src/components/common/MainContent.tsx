@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme?:any) => ({
         zIndex: 2,
         bottom: 0,
         padding: '2rem 0 1rem 0',
-        borderRadius: '10px 10px 0 0'
+        borderRadius: '10px 10px 0 0',
+        [theme.breakpoints.up('md')]: {
+            marginTop:700,
+        },
     },
     footer: {
         marginTop:'4rem',

@@ -3,18 +3,10 @@ import { withTheme } from './Theme';
 import MailIcon from '@material-ui/icons/Mail';
 import Facebook from '@material-ui/icons/Facebook';
 import Instagram from '@material-ui/icons/Instagram';
+import {handleClick} from "../../actions/handleClick";
+import {BannerType} from "../../types/BannerType";
 
-interface BannerProps {
-    backgroundSrc?: any;
-    logoSrc: any;
-    name: string;
-    description: string;
-    facebook?: string;
-    mail?: string;
-    instagram?: string;
-}
-
-const useStyles = makeStyles((theme?:any) => ({
+const useStyles = makeStyles((theme:any) => ({
     avatar: {
         height: 100,
         width: 100
@@ -30,19 +22,18 @@ const useStyles = makeStyles((theme?:any) => ({
         position: 'fixed',
         height: '600px',
         zIndex: -1,
-        top: 0
+        top: 0,
+        [theme.breakpoints.up('md')]: {
+            height: 'auto',
+        },
     },
     iconButton: {
         color: 'white'
     },
 }));
 
-export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagram,mail}:BannerProps) => {
+export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagram,mail}:BannerType) => {
     const classes = useStyles();
-
-    const handleClickButton = (url?:string) => {
-        window.open(url, '_blank');
-    }
 
     return (
         <>
@@ -62,17 +53,17 @@ export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagra
                     </Grid>
                     <Grid container justify="center" spacing={2}>
                         <Grid item>
-                            <IconButton onClick={() => handleClickButton(mail)} className={classes.iconButton} aria-label="mail">
+                            <IconButton onClick={() => handleClick(mail ? mail : '')} className={classes.iconButton} aria-label="mail">
                                 <MailIcon fontSize="medium" />
                             </IconButton>
                         </Grid>
                         <Grid item>
-                            <IconButton onClick={() => handleClickButton(facebook)} className={classes.iconButton} aria-label="mail">
+                            <IconButton onClick={() => handleClick(facebook ? facebook : '')} className={classes.iconButton} aria-label="mail">
                                 <Facebook fontSize="medium" />
                             </IconButton>
                         </Grid>
                         <Grid item>
-                            <IconButton onClick={() => handleClickButton(instagram)} className={classes.iconButton} aria-label="mail">
+                            <IconButton onClick={() => handleClick(instagram ? instagram : '')} className={classes.iconButton} aria-label="mail">
                                 <Instagram fontSize="medium" />
                             </IconButton>
                         </Grid>
