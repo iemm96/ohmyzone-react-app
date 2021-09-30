@@ -27,7 +27,7 @@ export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagra
 
     const StyledBackgroundContainer = styled('div')(({theme}) => ({
         backgroundImage: `url(${backgroundSrc})`,
-        backgroundRepeat: 'no-reapeat',
+        backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center top',
         backgroundSize: '900px',
         position: 'fixed',

@@ -2,7 +2,9 @@ import { withTheme } from '../common/Theme';
 import BG from '../../assets/img/bg.svg';
 import Logo from '../../assets/img/logo.png';
 
-import ImageLink from '../../assets/img/dark-ui-form.png';
+import Wallpapers from '../../assets/nucleodev/wallpapers.png';
+import Wxp from '../../assets/nucleodev/wxp.png';
+import Website from '../../assets/nucleodev/website.png';
 import Service1 from '../../assets/img/service1.png';
 import Service2 from '../../assets/img/service2.png';
 import Service3 from '../../assets/img/service3.png';
@@ -13,6 +15,8 @@ import Linkedin from '../../assets/img/linkedin.png';
 import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
+import {useEffect} from "react";
+import {changeBodyBackground} from "../../actions/changeBodyBackground";
 
 const mainData:MainData = {
     banner: {
@@ -27,13 +31,28 @@ const mainData:MainData = {
         backgroundSrc:BG
     },
     categories: [{
-        title:"Recursos UI",
+        title:"Nuestro universo",
+        cards:[{
+            title:"NucleoWeb",
+            description:"¡Visita nuestra web creada para terrícolas!",
+            buttonText:"Visitar web",
+            url: "https://nucleodev.com",
+            imageSrc:Website
+        }]
+    },{
+        title:"Recursos y descargables",
         cards:[{
             title:"Wallpapers y más",
             description:"Descarga nuestros Wallpapers para que personalices tu dispositivo",
             buttonText:"Descargar gratis",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:ImageLink
+            imageSrc:Wallpapers
+        },{
+            title:"eXPerience UI mini kit",
+            description:"Archivo de Figma con componentes estilo Windows XP",
+            buttonText:"Ver en Figma",
+            url: "https://www.figma.com/community/file/1021093530465277612",
+            imageSrc:Wxp
         }]
     },{
         title:"Nuestros servicios",
@@ -75,6 +94,10 @@ const mainData:MainData = {
 };
 
 const Layout = () => {
+
+    useEffect(() => {
+        changeBodyBackground("#00094A");
+    });
     
     return (
         <>

@@ -13,6 +13,8 @@ import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
 import {ThemeProvider, createTheme} from '@material-ui/core';
+import {useEffect} from "react";
+import {changeBodyBackground} from "../../actions/changeBodyBackground";
 
 const mainData:MainData = {
     banner: {
@@ -101,6 +103,10 @@ const Layout = () => {
                 main: '#C25E7D'
             }
         }
+    });
+
+    useEffect(() => {
+        changeBodyBackground("#191021");
     });
 
     return (
