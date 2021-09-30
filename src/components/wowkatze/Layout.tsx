@@ -1,8 +1,7 @@
-import { withTheme } from '../common/Theme';
-import BG from '../../assets/img/bg.svg';
-import Logo from '../../assets/img/logo.png';
+import BG from '../../assets/wowkatze/background.svg';
+import Logo from '../../assets/wowkatze/logo.png';
 
-import ImageLink from '../../assets/img/dark-ui-form.png';
+import Cereza from '../../assets/wowkatze/Cereza.png';
 import Service1 from '../../assets/img/service1.png';
 import Service2 from '../../assets/img/service2.png';
 import Service3 from '../../assets/img/service3.png';
@@ -13,27 +12,28 @@ import Linkedin from '../../assets/img/linkedin.png';
 import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
+import {ThemeProvider, createTheme} from '@material-ui/core';
 
 const mainData:MainData = {
     banner: {
-        textColor:"textPrimary",
-        iconsColor:"default",
-        name:"NucleoDev",
-        description:"Somos desarrolladores de otro planeta, ¡haz contácto con nosotros!",
-        facebook:"https://facebook.com/nucleodevoficial",
-        instagram:"https://instagram.com/nucleodevoficial",
-        mail:"mailto:contacto@nucleodev.com",
+        iconsColor: "primary",
+        textColor: "primary",
+        name:"Wow Katze!",
+        description:"Accesorios juveniles, modernos y Kawaii.",
+        facebook:"https://facebook.com/wowkatzeoficial",
+        instagram:"https://instagram.com/wowkatzeoficial",
+        mail:"mailto:wowkatzeoficial@gmail.com",
         logoSrc:Logo,
         backgroundSrc:BG
     },
     categories: [{
-        title:"Recursos UI",
+        title:"Más vendidos",
         cards:[{
-            title:"Wallpapers y más",
-            description:"Descarga nuestros Wallpapers para que personalices tu dispositivo",
-            buttonText:"Descargar gratis",
+            title:"Juicy Cherry",
+            description:"Aretes de Cerezas en tamaño real, elaboradas con resina y chapa de oro.",
+            buttonText:"Ir a comprar!",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:ImageLink
+            imageSrc:Cereza
         }]
     },{
         title:"Nuestros servicios",
@@ -75,9 +75,36 @@ const mainData:MainData = {
 };
 
 const Layout = () => {
-    
+
+    const darkTheme = createTheme({
+        typography: {
+            fontFamily: '"Nunito", sans-serif',
+            button: {
+                textTransform:'none',
+                fontWeight: 700
+            },
+            h5: {
+                fontWeight: 700
+            },
+            h6: {
+                fontWeight: 700
+            }
+        },
+        palette: {
+            type: "dark",
+            primary: {
+                light: '#32283B',
+                main: '#191021',
+                dark: '#FFFEFE'
+            },
+            secondary: {
+                main: '#C25E7D'
+            }
+        }
+    });
+
     return (
-        <>
+        <ThemeProvider theme={darkTheme}>
             <Banner
                 iconsColor={mainData.banner.iconsColor}
                 textColor={mainData.banner.textColor}
@@ -90,8 +117,8 @@ const Layout = () => {
                 mail={mainData.banner.mail}
             />
             <MainContent categories={mainData.categories}/>
-        </>
+        </ThemeProvider>
     )
 }
 
-export default withTheme(Layout);
+export default Layout;
