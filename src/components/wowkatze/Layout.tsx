@@ -15,6 +15,7 @@ import {MainData} from "../../interfaces/mainData";
 import {ThemeProvider, createTheme} from '@material-ui/core';
 import {useEffect} from "react";
 import {changeBodyBackground} from "../../actions/changeBodyBackground";
+import {changeDocumentTitle} from "../../actions/changeDocumentTitle";
 
 const mainData:MainData = {
     banner: {
@@ -107,7 +108,8 @@ const Layout = () => {
 
     useEffect(() => {
         changeBodyBackground("#191021");
-    });
+        changeDocumentTitle(`${mainData.banner.name} | OhMyZone!`);
+    },[]);
 
     return (
         <ThemeProvider theme={darkTheme}>

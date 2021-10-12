@@ -17,6 +17,7 @@ import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
 import {useEffect} from "react";
 import {changeBodyBackground} from "../../actions/changeBodyBackground";
+import {changeDocumentTitle} from "../../actions/changeDocumentTitle";
 
 const mainData:MainData = {
     banner: {
@@ -31,15 +32,6 @@ const mainData:MainData = {
         backgroundSrc:BG
     },
     categories: [{
-        title:"Nuestro universo",
-        cards:[{
-            title:"NucleoWeb",
-            description:"¡Visita nuestra web creada para terrícolas!",
-            buttonText:"Visitar web",
-            url: "https://nucleodev.com",
-            imageSrc:Website
-        }]
-    },{
         title:"Recursos y descargables",
         cards:[{
             title:"Wallpapers y más",
@@ -53,6 +45,15 @@ const mainData:MainData = {
             buttonText:"Ver en Figma",
             url: "https://www.figma.com/community/file/1021093530465277612",
             imageSrc:Wxp
+        }]
+    },{
+        title:"Nuestro universo",
+        cards:[{
+            title:"NucleoWeb",
+            description:"¡Visita nuestra web creada para terrícolas!",
+            buttonText:"Visitar web",
+            url: "https://nucleodev.com",
+            imageSrc:Website
         }]
     },{
         title:"Nuestros servicios",
@@ -97,8 +98,16 @@ const Layout = () => {
 
     useEffect(() => {
         changeBodyBackground("#00094A");
-    });
-    
+        changeDocumentTitle(`${mainData.banner.name} | OhMyZone!`);
+        changeFavicon();
+    },[]);
+
+    const changeFavicon = async () => {
+        const favicon = (document?.getElementById('favicon') as HTMLAnchorElement);
+        console.log(favicon);
+        favicon.href = 'https://stackoverflow.com/favicon.ico';
+    }
+
     return (
         <>
             <Banner
