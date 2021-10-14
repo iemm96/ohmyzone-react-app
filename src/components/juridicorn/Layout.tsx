@@ -1,7 +1,11 @@
 import BG from '../../assets/juridicorn/bg.jpg';
 import Logo from '../../assets/juridicorn/logo.jpeg';
 
-import Service1 from '../../assets/img/service1.png';
+import Image1 from '../../assets/juridicorn/1.jpg';
+import Image2 from '../../assets/juridicorn/2.jpg';
+import Image3 from '../../assets/juridicorn/3.jpg';
+import Image4 from '../../assets/juridicorn/4.jpg';
+import Image5 from '../../assets/juridicorn/5.jpg';
 
 import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
@@ -31,31 +35,31 @@ const mainData:MainData = {
             description:"",
             buttonText:"Más información",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Service1
+            imageSrc:Image1
         },{
             title:"Anulación o descuento en adeudos con SIAPA.",
             description:"",
             buttonText:"Más información",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Service1
+            imageSrc:Image2
         },{
             title:"Anulación de multas por Ayuntamiento.",
             description:"",
             buttonText:"Más información",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Service1
+            imageSrc:Image3
         },{
             title:"Solicitud de prescripcion en adeudo predial.",
             description:"",
             buttonText:"Más información",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Service1
+            imageSrc:Image4
         },{
             title:"Defensa contra autoridades.",
             description:"",
             buttonText:"Más información",
             url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Service1
+            imageSrc:Image5
         }]
     }]
 };
@@ -68,6 +72,10 @@ const Layout = () => {
             button: {
                 textTransform:'none',
                 fontWeight: 700,
+            },
+            caption: {
+                fontWeight: 700,
+                fontSize:16
             },
             h5: {
                 fontWeight: 700

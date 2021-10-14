@@ -2,6 +2,7 @@ import {Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, Bo
 import { withTheme } from './Theme';
 import {handleClick} from "../../actions/handleClick";
 import {CardType} from "../../types/CardType";
+import {truncateString} from "../../actions/truncateString";
 
 const useStyles = makeStyles((theme?:any) => ({
     root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme?:any) => ({
         backgroundColor: theme.palette.primary.light,
     },
     cardActionArea: {
-        height: '100%' 
+        height: '100%'
     },
     button: {
         backgroundColor: theme.palette.secondary.main,
@@ -33,7 +34,6 @@ const useStyles = makeStyles((theme?:any) => ({
     }
 }));
 
-
 export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardType) => {
     const classes = useStyles();
 
@@ -42,8 +42,8 @@ export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardTy
             <CardActionArea onClick={() => handleClick(url) } className={classes.cardActionArea}>
                 <CardMedia component="img" image={imageSrc} className={classes.media}/>
                 <CardContent className={classes.content}>
-                    <Typography variant="h6">
-                        {title}
+                    <Typography variant={title.length > 26 ? 'caption' : 'h6'}>
+                        {truncateString(title,100)}
                     </Typography>
                     <Typography variant="body2">
                         {description}
