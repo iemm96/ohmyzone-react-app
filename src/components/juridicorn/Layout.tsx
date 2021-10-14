@@ -22,43 +22,44 @@ const mainData:MainData = {
         name:"Corporativo jurídico RN",
         description:"Especialistas en consultoría jurídica\n" +
             "de alto nivel.",
-        facebook:"https://facebook.com/wowkatzeoficial",
-        instagram:"https://instagram.com/wowkatzeoficial",
-        mail:"mailto:wowkatzeoficial@gmail.com",
+        phone:"523333939183",
+        facebook:"https://www.facebook.com/RN-Corporativo-Jur%C3%ADdico-107030548392132",
+        instagram:"https://instagram.com/rn.corporativo",
+        mail:"mailto:rn.corporativojuridico@gmail.com",
         logoSrc:Logo,
         backgroundSrc:BG
     },
     categories: [{
-        title:"Juicios de nulidad",
+        title:"Juicios de nulidad.",
         cards:[{
             title:"Anulación de multas vehiculares, estatales y federales.",
             description:"",
             buttonText:"Más información",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
+            url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Anulación+de+multas+vehiculares,+estatales+y+federales.",
             imageSrc:Image1
         },{
             title:"Anulación o descuento en adeudos con SIAPA.",
             description:"",
             buttonText:"Más información",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
+            url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Anulación+o+descuento+en+adeudos+con+SIAPA. Layout.tsx:112",
             imageSrc:Image2
         },{
             title:"Anulación de multas por Ayuntamiento.",
             description:"",
             buttonText:"Más información",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
+            url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Anulación+de+multas+por+Ayuntamiento.",
             imageSrc:Image3
         },{
             title:"Solicitud de prescripcion en adeudo predial.",
             description:"",
             buttonText:"Más información",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
+            url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Solicitud+de+prescripcion+en+adeudo+predial.",
             imageSrc:Image4
         },{
             title:"Defensa contra autoridades.",
             description:"",
             buttonText:"Más información",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
+            url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Defensa+contra+autoridades.",
             imageSrc:Image5
         }]
     }]
@@ -118,6 +119,7 @@ const Layout = () => {
                 logoSrc={mainData.banner.logoSrc}
                 name={mainData.banner.name}
                 description={mainData.banner.description}
+                phone={mainData.banner.phone}
                 facebook={mainData.banner.facebook}
                 instagram={mainData.banner.instagram}
                 mail={mainData.banner.mail}

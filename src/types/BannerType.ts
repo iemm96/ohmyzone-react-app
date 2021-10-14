@@ -8,6 +8,7 @@ export type BannerType = {
     backgroundSrc:any;
     name:string;
     description:string;
+    phone?:string;
     facebook?:string;
     instagram?:string;
     mail?:string;

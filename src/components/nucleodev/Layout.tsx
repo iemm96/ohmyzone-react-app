@@ -18,6 +18,7 @@ import {MainData} from "../../interfaces/mainData";
 import {useEffect} from "react";
 import {changeBodyBackground} from "../../actions/changeBodyBackground";
 import {changeDocumentTitle} from "../../actions/changeDocumentTitle";
+import {makeWhatsappUrl} from "../../actions/makeWhatsappUrl";
 
 const mainData:MainData = {
     banner: {
@@ -28,6 +29,7 @@ const mainData:MainData = {
         facebook:"https://facebook.com/nucleodevoficial",
         instagram:"https://instagram.com/nucleodevoficial",
         mail:"mailto:contacto@nucleodev.com",
+        phone: "523323660598",
         logoSrc:Logo,
         backgroundSrc:BG
     },
@@ -61,19 +63,19 @@ const mainData:MainData = {
             title:"Diseño UI · UX",
             description:"Diseñamos interfaces intuitivas e impactantes para tu producto digital.",
             buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+UX+Design&app_absent=0",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+quiero+más+información+sobre+el+servicio+de+UX+Design&app_absent=0",
             imageSrc:Service1
         },{
             title:"Desarrollo de software",
             description:"Creamos Páginas Web, eCommerce, Sistemas, Aplicaciones móviles y WebApps.",
             buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Desarrollo+de+Software&app_absent=0",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+quiero+más+información+sobre+el+servicio+de+Desarrollo+de+Software&app_absent=0",
             imageSrc:Service2
         },{
             title:"Mentoría UX",
             description:"Te ayudamos en cualquier fase de tu proyecto, capacitamos a tu equipo en Experiencia de usuario y diseño UI.",
             buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Mentoría+UX&app_absent=0",
+            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+quiero+más+información+sobre+el+servicio+dentoría+UX&app_absent=0",
             imageSrc:Service3
         }]
     },{
@@ -100,6 +102,7 @@ const Layout = () => {
         changeBodyBackground("#00094A");
         changeDocumentTitle(`${mainData.banner.name} | OhMyZone!`);
         changeFavicon();
+        console.log(makeWhatsappUrl(mainData.banner.phone,"Hola me interesa el servicio de desarrollo web"));
     },[]);
 
     const changeFavicon = async () => {

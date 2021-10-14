@@ -7,6 +7,7 @@ import {handleClick} from "../../actions/handleClick";
 import {BannerType} from "../../types/BannerType";
 import { useSpring, animated,useChain } from 'react-spring';
 import { useSpringRef } from '@react-spring/web';
+import {Phone} from "@material-ui/icons";
 
 const useStyles = makeStyles(() => ({
     avatar: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagram,mail,textColor,iconsColor}:BannerType) => {
+export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagram,mail,textColor,iconsColor,phone}:BannerType) => {
     const classes = useStyles();
     const bannerAnimationRef = useSpringRef();
     const bannerAnimationRef2 = useSpringRef();
@@ -70,6 +71,12 @@ export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagra
 
                     <animated.div style={bannerAnimationStyle2}>
                         <Grid container justify="center" spacing={2}>
+                            {phone &&
+                            <Grid item>
+                                <IconButton color={iconsColor} onClick={() => handleClick("tel:+" + phone)}  aria-label="mail">
+                                    <Phone fontSize="medium" />
+                                </IconButton>
+                            </Grid>}
                             <Grid item>
                                 <IconButton color={iconsColor} onClick={() => handleClick(mail ? mail : '')}  aria-label="mail">
                                     <MailIcon fontSize="medium" />
