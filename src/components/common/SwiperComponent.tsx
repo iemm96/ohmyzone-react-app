@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import { CardComponent } from './CardComponent';
 import {CardType} from "../../types/CardType";
-import {getWindowDimensions} from "../../actions/getWindowDimensions";
+import {getWindowDimensions} from "../../helpers/getWindowDimensions";
 
 interface SwiperComponentProps {
     cards:CardType[];

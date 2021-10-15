@@ -1,40 +1,41 @@
 import {Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, Box, Button } from "@material-ui/core";
 import { withTheme } from './Theme';
-import {handleClick} from "../../actions/handleClick";
+import {handleClick} from "../../helpers/handleClick";
 import {CardType} from "../../types/CardType";
-import {truncateString} from "../../actions/truncateString";
-
-const useStyles = makeStyles((theme?:any) => ({
-    root: {
-        borderRadius: 20,
-        backgroundColor: theme.palette.primary.dark,
-        height: 340,
-        width: 280
-    },
-    media: {
-        height: 150,
-    },
-    content: {
-        height: 158,
-        backgroundColor: theme.palette.primary.light,
-    },
-    cardActionArea: {
-        height: '100%'
-    },
-    button: {
-        backgroundColor: theme.palette.secondary.main,
-        borderRadius: 30,
-        margin: '14px 0',
-        position: 'absolute',
-        bottom: 0,
-        width: '90%',
-        "&.hover": {
-            background:'black',
-          },
-    }
-}));
+import {truncateString} from "../../helpers/truncateString";
 
 export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardType) => {
+
+    const useStyles = makeStyles((theme?:any) => ({
+        root: {
+            borderRadius: 20,
+            backgroundColor: theme.palette.primary.dark,
+            height: description.length > 100 ? 400 : 340,
+            width: 280
+        },
+        media: {
+            height: 150,
+        },
+        content: {
+            height: '100%',
+            backgroundColor: theme.palette.primary.light,
+        },
+        cardActionArea: {
+            height: '100%'
+        },
+        button: {
+            backgroundColor: theme.palette.secondary.main,
+            borderRadius: 30,
+            margin: '14px 0',
+            position: 'absolute',
+            bottom: 0,
+            width: '90%',
+            "&.hover": {
+                background:'black',
+            },
+        }
+    }));
+
     const classes = useStyles();
 
     return (

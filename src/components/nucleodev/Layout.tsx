@@ -16,9 +16,9 @@ import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
 import {useEffect} from "react";
-import {changeBodyBackground} from "../../actions/changeBodyBackground";
-import {changeDocumentTitle} from "../../actions/changeDocumentTitle";
-import {makeWhatsappUrl} from "../../actions/makeWhatsappUrl";
+import {changeBodyBackground} from "../../helpers/changeBodyBackground";
+import {changeDocumentTitle} from "../../helpers/changeDocumentTitle";
+import {makeWhatsappUrl} from "../../helpers/makeWhatsappUrl";
 
 const mainData:MainData = {
     banner: {

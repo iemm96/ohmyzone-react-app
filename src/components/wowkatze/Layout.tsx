@@ -14,8 +14,8 @@ import { MainContent } from "../common/MainContent";
 import {MainData} from "../../interfaces/mainData";
 import {ThemeProvider, createTheme} from '@material-ui/core';
 import {useEffect} from "react";
-import {changeBodyBackground} from "../../actions/changeBodyBackground";
-import {changeDocumentTitle} from "../../actions/changeDocumentTitle";
+import {changeBodyBackground} from "../../helpers/changeBodyBackground";
+import {changeDocumentTitle} from "../../helpers/changeDocumentTitle";
 
 const mainData:MainData = {
     banner: {

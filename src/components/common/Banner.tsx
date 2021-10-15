@@ -3,7 +3,7 @@ import { withTheme } from './Theme';
 import MailIcon from '@material-ui/icons/Mail';
 import Facebook from '@material-ui/icons/Facebook';
 import Instagram from '@material-ui/icons/Instagram';
-import {handleClick} from "../../actions/handleClick";
+import {handleClick} from "../../helpers/handleClick";
 import {BannerType} from "../../types/BannerType";
 import { useSpring, animated,useChain } from 'react-spring';
 import { useSpringRef } from '@react-spring/web';
