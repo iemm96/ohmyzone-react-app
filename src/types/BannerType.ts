@@ -7,6 +7,7 @@ export type BannerType = {
     logoSrc:any;
     backgroundSrc:any;
     name:string;
+    subtitle?:string;
     description:string;
     phone?:string;
     facebook?:string;
