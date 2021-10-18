@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagram,mail,textColor,iconsColor,phone}:BannerType) => {
+export const Banner = ({subtitle,name,description,logoSrc,backgroundSrc,facebook,instagram,mail,textColor,iconsColor,phone}:BannerType) => {
     const classes = useStyles();
     const bannerAnimationRef = useSpringRef();
     const bannerAnimationRef2 = useSpringRef();
@@ -56,13 +56,17 @@ export const Banner = ({name,description,logoSrc,backgroundSrc,facebook,instagra
             <Container className={classes.headerContainer} maxWidth="xs">
                 <Box className={classes.mainBoxContent}>
                     <animated.div style={bannerAnimationStyle}>
-                        <Grid alignItems="center" direction="column" spacing={2} container>
+                        <Grid alignItems="center" direction="column" spacing={1} container>
                             <Grid item xs={12}>
                                 <Avatar alt="Logo brand" src={logoSrc} className={classes.avatar}/>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography color={textColor} align="center" variant="h5">{name}</Typography>
                             </Grid>
+                            {subtitle &&
+                            <Grid item xs={12}>
+                                <Typography color={textColor} align="center" variant="h6">{subtitle}</Typography>
+                            </Grid>}
                             <Grid item xs={12}>
                                 <Typography color={textColor} align="center">{description}</Typography>
                             </Grid>

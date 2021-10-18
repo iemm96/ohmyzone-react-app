@@ -26,7 +26,8 @@ const mainData:MainData = {
     banner: {
         iconsColor: "secondary",
         textColor: "secondary",
-        name:"Corporativo jurídico RN",
+        name:"RN",
+        subtitle: "Corporativo jurídico",
         description:"Especialistas en consultoría jurídica\n" +
             "de alto nivel.",
         phone:"523333939183",
@@ -63,7 +64,7 @@ const mainData:MainData = {
             url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Solicitud+de+prescripcion+en+adeudo+predial.",
             imageSrc:Image4
         },{
-            title:"Defensa contra autoridades.",
+            title:"Medios de Defensa Legal.",
             description:"Promovemos medios de defensa como recursos legales contra autoridades que ejerzan acciones que afectan nuestros derechos, poniendo en riesgo nuestro patrimonio.",
             buttonText:"Más información",
             url: "https://api.whatsapp.com/send/?phone=523333939183&text=Hola,+quiero+más+información+sobre+el+servicio+de+Defensa+contra+autoridades.",
@@ -168,6 +169,7 @@ const Layout = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <Banner
+                subtitle={mainData.banner.subtitle}
                 iconsColor={mainData.banner.iconsColor}
                 textColor={mainData.banner.textColor}
                 backgroundSrc={mainData.banner.backgroundSrc}
