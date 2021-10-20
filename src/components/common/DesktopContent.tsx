@@ -1,16 +1,16 @@
 import {CategoryType} from "../../types/CategoryType";
 import {Grid} from "@material-ui/core";
 import TitleCategory from "./TitleCategory";
-import {CardComponent} from "./CardComponent";
+import {CardDesktop} from "./CardDesktop";
 
 const DesktopContent = ({title,cards}:CategoryType) => {
     return(
         <>
             <TitleCategory title={title}/>
-            <Grid container>
+            <Grid container spacing={3}>
                 {cards.map(card => (
-                    <Grid container justifyContent="center" item xs={4}>
-                        <CardComponent
+                    <Grid container justifyContent="center" item xs={12}>
+                        <CardDesktop
                             title={card.title}
                             description={card.description}
                             buttonText={card.buttonText}
