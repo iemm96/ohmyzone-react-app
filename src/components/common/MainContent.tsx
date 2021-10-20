@@ -1,17 +1,17 @@
-import { Typography, Container, Grid, makeStyles, Paper, } from "@material-ui/core";
+import {Container, makeStyles, Paper,} from "@material-ui/core";
 import { withTheme } from './Theme';
 import LogoOhMyZone from '../../assets/img/logo-oh-my-zone.svg';
-import { SwiperComponent } from "./SwiperComponent";
 import {CategoryType} from "../../types/CategoryType";
+import {useEffect, useState} from "react";
+import MobileContent from "./MobileContent";
+import DesktopContent from "./DesktopContent";
 
 interface MainContentProps {
     categories:CategoryType[]
 }
 
 const useStyles = makeStyles((theme?:any) => ({
-    sectionTitle: {
-        margin: '16px 0'
-    },
+
     paper: {
         backgroundColor: theme.palette.primary.main,
         width: '100%',
@@ -36,20 +36,35 @@ const useStyles = makeStyles((theme?:any) => ({
 export const MainContent = ({categories}:MainContentProps) => {
     const classes = useStyles();
 
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+            width,
+            height
+        };
+    }
+
     return (
         <Paper className={classes.paper}>
-            {categories.map((category:CategoryType) => (
-                <>
-                    <Container maxWidth="xs">
-                        <Grid container>
-                            <Grid item>
-                                <Typography variant="h6" className={classes.sectionTitle}>{category.title}</Typography>
-                            </Grid>
-                        </Grid>
-                    </Container>
-                    <SwiperComponent cards={category.cards}/>
-                </>
-            ))}
+            <Container maxWidth="lg">
+                {windowDimensions.width < 900 ? categories.map((category:CategoryType) => (
+                    <MobileContent title={category.title} cards={category.cards}/>
+                )) : categories.map((category:CategoryType) => (
+                    <DesktopContent title={category.title} cards={category.cards}/>
+                ))}
+            </Container>
             <footer className={classes.footer}>
                 <img src={LogoOhMyZone} alt="Oh my zone!" height={80}/>
             </footer>

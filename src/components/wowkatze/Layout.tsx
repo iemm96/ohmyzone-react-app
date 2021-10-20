@@ -1,13 +1,11 @@
 import BG from '../../assets/wowkatze/background.svg';
 import Logo from '../../assets/wowkatze/logo.png';
+import img1 from '../../assets/wowkatze/img1.jpg';
+import img2 from '../../assets/wowkatze/img2.jpg';
+import img3 from '../../assets/wowkatze/img3.jpg';
+import img4 from '../../assets/wowkatze/img4.jpg';
 
-import Cereza from '../../assets/wowkatze/Cereza.png';
-import Service1 from '../../assets/img/service1.png';
-import Service2 from '../../assets/img/service2.png';
-import Service3 from '../../assets/img/service3.png';
-
-import Behance from '../../assets/img/behance.png';
-import Linkedin from '../../assets/img/linkedin.png';
+import tiktok from '../../assets/wowkatze/tiktok.png';
 
 import { Banner } from "../common/Banner";
 import { MainContent } from "../common/MainContent";
@@ -32,47 +30,38 @@ const mainData:MainData = {
     categories: [{
         title:"Más vendidos",
         cards:[{
-            title:"Juicy Cherry",
-            description:"Aretes de Cerezas en tamaño real, elaboradas con resina y chapa de oro.",
-            buttonText:"Ir a comprar!",
-            url: "https://drive.google.com/drive/folders/1asJSPo1ISmV6JEbV_njcvD3-oVFXDsLL?usp=sharing",
-            imageSrc:Cereza
+            title:"Chocker Purple Agate",
+            description:"echo a mano por manos mexicanas con mucho cariño. Ágata natural morada envuelta artesanalmente con alambre chapado en oro.",
+            buttonText:"¡Ir a comprar!",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+me+gustaría+comprar+un+Chocker+Purple+Agate",
+            imageSrc:img1
+        },{
+            title:"Pendientes Ojitos llorones",
+            description:"Elegantes y únicos pendientes con ojitos que todo lo ven, representan luz, sabiduría y al espíritu. Elaborados por manos mexicanas con mucho cariño.",
+            buttonText:"¡Ir a comprar!",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+me+gustaría+comprar+los+Pendientes+Ojitos+llorones",
+            imageSrc:img2
+        },{
+            title:"Pendientes Atrapa Sueños",
+            description:"¡Protege tus sueños con estos hermosos pendientes!",
+            buttonText:"¡Ir a comprar!",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+me+gustaría+comprar+los+Pendientes+atrapa+sueños",
+            imageSrc:img3
+        },{
+            title:"Sakura Perlas",
+            description:"Hermosos pendientes, elegantes y al mismo tiempo kawaii, elaborados a mano por manitas mexicanas kawaii.",
+            buttonText:"¡Ir a comprar!",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+me+gustaría+comprar+los+Pendientes+de+Sakura+perlas",
+            imageSrc:img4
         }]
     },{
-        title:"Nuestros servicios",
+        title:"Mis links",
         cards:[{
-            title:"Diseño UI · UX",
-            description:"Diseñamos interfaces intuitivas e impactantes para tu producto digital.",
-            buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+UX+Design&app_absent=0",
-            imageSrc:Service1
-        },{
-            title:"Desarrollo de software",
-            description:"Creamos Páginas Web, eCommerce, Sistemas, Aplicaciones móviles y WebApps.",
-            buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Desarrollo+de+Software&app_absent=0",
-            imageSrc:Service2
-        },{
-            title:"Mentoría UX",
-            description:"Te ayudamos en cualquier fase de tu proyecto, capacitamos a tu equipo en Experiencia de usuario y diseño UI.",
-            buttonText:"Más información",
-            url: "https://api.whatsapp.com/send/?phone=523323660598&text=Hola+me+quiero+más+información+sobre+el+servicio+de+Mentoría+UX&app_absent=0",
-            imageSrc:Service3
-        }]
-    },{
-        title:"Nuestro portafolio",
-        cards:[{
-            title:"Behance",
-            description:"Mira nuestros diseños y desarrollos personales y para nuestros clientes.",
-            buttonText:"Ver Behance",
-            url: "https://www.behance.net/nucleodev",
-            imageSrc:Behance
-        },{
-            title:"LinkedIn",
-            description:"Mira nuestros diseños y desarrollos personales y para nuestros clientes.",
-            buttonText:"Ver LinkedIn",
-            url: "https://linkedin.com/company/nucleodev/",
-            imageSrc:Linkedin
+            title:"TikTok",
+            description:"No te pierdas ninguna de mis creaciones.",
+            buttonText:"Sígueme en TikTok",
+            url: "https://vm.tiktok.com/ZM8hVFEvm/",
+            imageSrc:tiktok
         }]
     }]
 };
