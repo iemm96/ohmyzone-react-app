@@ -1,5 +1,5 @@
 import { withTheme } from '../common/Theme';
-import BG from '../../assets/img/bg.svg';
+import BG from '../../assets/nucleodev/halloween.svg';
 import Logo from '../../assets/img/logo.png';
 
 import Wallpapers from '../../assets/nucleodev/wallpapers.png';
@@ -19,6 +19,7 @@ import {useEffect} from "react";
 import {changeBodyBackground} from "../../helpers/changeBodyBackground";
 import {changeDocumentTitle} from "../../helpers/changeDocumentTitle";
 import {makeWhatsappUrl} from "../../helpers/makeWhatsappUrl";
+import {createTheme, ThemeProvider} from "@material-ui/core";
 
 const mainData:MainData = {
     banner: {
@@ -99,7 +100,7 @@ const mainData:MainData = {
 const Layout = () => {
 
     useEffect(() => {
-        changeBodyBackground("#00094A");
+        changeBodyBackground("#2B0154");
         changeDocumentTitle(`${mainData.banner.name} | OhMyZone!`);
         changeFavicon();
         console.log(makeWhatsappUrl(mainData.banner.phone,"Hola me interesa el servicio de desarrollo web"));
@@ -111,20 +112,62 @@ const Layout = () => {
         favicon.href = 'https://stackoverflow.com/favicon.ico';
     }
 
+    const darkTheme = createTheme({
+        typography: {
+            fontFamily: '"Nunito", sans-serif',
+            button: {
+                textTransform:'none',
+                fontWeight: 700,
+            },
+            caption: {
+                fontWeight: 700,
+                fontSize:16
+            },
+            h5: {
+                fontWeight: 700
+            },
+            h6: {
+                fontWeight: 700
+            }
+        },
+        palette: {
+            type: "dark",
+            primary: {
+                light: '#B026BF',
+                main: '#2B0154',
+                dark: '#71007E'
+            },
+            secondary: {
+                main: '#CC0487'
+            }
+        },
+        overrides: {
+            MuiButton: {
+                label: {
+                    color: "#ffffff",
+                },
+            },
+        }
+    });
+
     return (
         <>
-            <Banner
-                iconsColor={mainData.banner.iconsColor}
-                textColor={mainData.banner.textColor}
-                backgroundSrc={mainData.banner.backgroundSrc}
-                logoSrc={mainData.banner.logoSrc}
-                name={mainData.banner.name}
-                description={mainData.banner.description}
-                facebook={mainData.banner.facebook}
-                instagram={mainData.banner.instagram}
-                mail={mainData.banner.mail}
-            />
-            <MainContent categories={mainData.categories}/>
+            <ThemeProvider theme={darkTheme}>
+                <Banner
+                    subtitle={mainData.banner.subtitle}
+                    iconsColor={mainData.banner.iconsColor}
+                    textColor={mainData.banner.textColor}
+                    backgroundSrc={mainData.banner.backgroundSrc}
+                    logoSrc={mainData.banner.logoSrc}
+                    name={mainData.banner.name}
+                    description={mainData.banner.description}
+                    phone={mainData.banner.phone}
+                    facebook={mainData.banner.facebook}
+                    instagram={mainData.banner.instagram}
+                    mail={mainData.banner.mail}
+                />
+                <MainContent categories={mainData.categories}/>
+            </ThemeProvider>
         </>
     )
 }
