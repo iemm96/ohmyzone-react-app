@@ -58,7 +58,7 @@ export const MainContent = ({categories}:MainContentProps) => {
 
     return (
         <Paper className={classes.paper}>
-            <Container maxWidth="lg">
+            <Container maxWidth="md">
                 {windowDimensions.width < 900 ? categories.map((category:CategoryType) => (
                     <MobileContent title={category.title} cards={category.cards}/>
                 )) : categories.map((category:CategoryType) => (
