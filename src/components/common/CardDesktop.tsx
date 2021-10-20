@@ -1,4 +1,4 @@
-import {Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, Box, Button } from "@material-ui/core";
+import {Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, Button } from "@material-ui/core";
 import { withTheme } from './Theme';
 import {handleClick} from "../../helpers/handleClick";
 import {CardType} from "../../types/CardType";
