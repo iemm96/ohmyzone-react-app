@@ -13,18 +13,9 @@ export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardTy
             height: description.length > 100 ? 400 : 340,
             width: 280,
             maxWidth: 350,
-            [theme.breakpoints.up('md')]: {
-                //height: 160,
-                width: '100%',
-                display: 'flex'
-            },
         },
         media: {
             height: 150,
-            [theme.breakpoints.up('md')]: {
-                height: 180,
-                //width: 160
-            },
         },
         content: {
             height: '100%',
@@ -32,10 +23,6 @@ export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardTy
         },
         cardActionArea: {
             height: '100%',
-            [theme.breakpoints.up('md')]: {
-                //display: 'flex',
-                width: '100%'
-            },
         },
         button: {
             backgroundColor: theme.palette.secondary.main,
@@ -46,11 +33,6 @@ export const CardComponent = ({title,description,buttonText,imageSrc,url}:CardTy
             width: '90%',
             "&.hover": {
                 background:'black',
-            },
-            [theme.breakpoints.up('md')]: {
-                //bottom: 0,
-                //right: 16,
-                //width: 296
             },
         }
     }));
