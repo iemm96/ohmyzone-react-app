@@ -1,5 +1,5 @@
 import { withTheme } from '../common/Theme';
-import BG from '../../assets/nucleodev/halloween.svg';
+import BG from '../../assets/nucleodev/dia_de_muertos.svg';
 import Logo from '../../assets/img/logo.png';
 
 import Wallpapers from '../../assets/nucleodev/wallpapers.png';
@@ -100,7 +100,7 @@ const mainData:MainData = {
 const Layout = () => {
 
     useEffect(() => {
-        changeBodyBackground("#2B0154");
+        changeBodyBackground("#2E0134");
         changeDocumentTitle(`${mainData.banner.name} | OhMyZone!`);
         changeFavicon();
         console.log(makeWhatsappUrl(mainData.banner.phone,"Hola me interesa el servicio de desarrollo web"));
@@ -133,12 +133,12 @@ const Layout = () => {
         palette: {
             type: "dark",
             primary: {
-                light: '#B026BF',
-                main: '#2B0154',
-                dark: '#71007E'
+                light: '#560051',
+                main: '#2E0134',
+                dark: '#7A008B'
             },
             secondary: {
-                main: '#CC0487'
+                main: '#EB6B00'
             }
         },
         overrides: {
