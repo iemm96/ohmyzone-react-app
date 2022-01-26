@@ -1,10 +1,5 @@
 import BG from '../../assets/wowkatze/background.svg';
 import Logo from '../../assets/wowkatze/logo.png';
-import img1 from '../../assets/wowkatze/img1.jpg';
-import img2 from '../../assets/wowkatze/img2.jpg';
-import img3 from '../../assets/wowkatze/img3.jpg';
-import img4 from '../../assets/wowkatze/img4.jpg';
-import collarModeloLucy from '../../assets/wowkatze/collares/collar_modelo_lucy.jpg';
 
 import tiktok from '../../assets/wowkatze/tiktok.png';
 
@@ -178,11 +173,56 @@ const mainData:MainData = {
     },{
         title:"Mis links",
         cards:[{
+            title:"Tienda en línea",
+            description:"Envíos y descuentos especiales a toda la república mexicana.",
+            buttonText:"¡Visitar!",
+            url: "https://wowkatze.mx/",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643223584/ohmyzone/redes_sociales/ecommerce_bim8db.jpg"
+        },{
+            title:"Instagram",
+            description:"No te pierdas ninguna de mis creaciones.",
+            buttonText:"Sígueme en Instagram",
+            url: "https://www.instagram.com/wowkatzeoficial/",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643223584/ohmyzone/redes_sociales/instagram_olts63.jpg"
+        },{
+            title:"Facebook",
+            description:"No te pierdas ninguna de mis creaciones.",
+            buttonText:"Sígueme en Facebook",
+            url: "https://www.facebook.com/WowKatze",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643223806/ohmyzone/redes_sociales/facebook_nemdof.png"
+        },{
             title:"TikTok",
             description:"No te pierdas ninguna de mis creaciones.",
             buttonText:"Sígueme en TikTok",
             url: "https://vm.tiktok.com/ZM8hVFEvm/",
             imageSrc:tiktok
+        },{
+            title:"Whatsapp",
+            description:"¿Tienes alguna duda? Escríbeme",
+            buttonText:"Enviar whatsApp",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+quiero+consultar+",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643223584/ohmyzone/redes_sociales/whatsapp_wkbuep.png"
+        }]
+    },{
+        title:"Zonas de entrega",
+        cards:[{
+            title:"Parque Rojo",
+            description:"Entregas todos los sábados de 2 a 3 p.m.",
+            buttonText:"¡Ver Mapa!",
+            url: "https://goo.gl/maps/KYDGjijLWG3aHJw89",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643222615/ohmyzone/wowkatze/Zonas%20de%20entrega/parque_rojo_ktiv01.png"
+        },{
+            title:"Mukha Showroom tlaquepaque",
+            description:"Lunes a Domingo de 11:00 a.m. a 7:30 p.m. Calle Independencia #248, local K. Parian, Tlaquepaque, Jalisco.",
+            buttonText:"Ver Mapa",
+            url: "https://goo.gl/maps/yyNbrdhhxXcgMfrU6",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643222907/ohmyzone/wowkatze/Zonas%20de%20entrega/mukha_tlaquepaque_zcmebe.png"
+        },{
+            title:"Mukha Showroom Minerva",
+            description:"Lunes a Viernes de 11:00 a.m. a 7:30 p.m. Av. Vallarta #3005, Col. Vallarta Poniente, Guadalajara, Jalisco.",
+            buttonText:"¡Ver Mapa!",
+            url: "https://g.page/mukha-mx-showroom?share",
+            imageSrc:"https://res.cloudinary.com/nucleodev/image/upload/v1643222615/ohmyzone/wowkatze/Zonas%20de%20entrega/mukha_minerva_smr2fq.jpg"
         }]
     }
 ]
