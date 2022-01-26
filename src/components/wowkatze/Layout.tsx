@@ -171,6 +171,15 @@ const mainData:MainData = {
             imageSrc: "https://res.cloudinary.com/nucleodev/image/upload/v1643150827/ohmyzone/wowkatze/Pulseras/modelo_protegeme_a8cbed.jpg"
         }]
     },{
+        title: "Anillos",
+        cards:[{
+            title: "Anillos mágicos",
+            description:"Elaborados con piedras naturales, ojos turcos y chapa de oro.",
+            buttonText:"¡Ir a comprar!",
+            url: "https://api.whatsapp.com/send/?phone=523314317251&text=Hola,+me+gustaría+comprar+un+anillo",
+            imageSrc: "https://res.cloudinary.com/nucleodev/image/upload/v1643226631/ohmyzone/wowkatze/anillos/photo_2022-01-26_13-50-04_svp8bn.jpg"
+        }]
+    },{
         title:"Mis links",
         cards:[{
             title:"Tienda en línea",
